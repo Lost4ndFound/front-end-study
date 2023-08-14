@@ -1,0 +1,26 @@
+html {
+    font-size: 20px;
+    font-family: /*自定义字体*/ smiley-sans, /*备用字体*/system-ui,-apple-system,BlinkMacSystemFont,Arial, /*通用字体*/sans-serif;
+    background-color: #00539f;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
