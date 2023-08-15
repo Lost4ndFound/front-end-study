@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超链接</title>
+</head>
+<body>
+    <h1>链接最佳实践</h1>
+    <h2>使用清晰的链接措辞</h2>
+    <p><strong>好的</strong>链接文本：<a href="https://www.mozilla.org/firefox/">下载Firefox</a></p>
+    <p><strong>不好的</strong>链接文本：<a href="https://www.mozilla.org/firefox/">点击这里</a>下载Firefox</p>
+    <h2>链接到非 HTML 资源——留下清晰的指示</h2>
+    <p>
+        <a href="https://www.example.com/large-report.pdf">
+          下载销售报告（PDF，大小为 10 MB）
+        </a>
+      </p>
+      
+      <p>
+        <a href="https://www.example.com/video-stream/" target="_blank">
+          观看视频（将在新标签页中播放，HD 画质）
+        </a>
+      </p>
+    <h2>在下载链接时使用 download 属性</h2>
+    <!-- 当你链接到要下载的资源而不是在浏览器中打开时，你可以使用 download 属性来提供一个默认的保存文件名。 -->
+    <a
+        href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
+        download="firefox-latest-64bit-installer.exe">
+        下载最新的 Firefox 中文版 - Windows（64 位）
+    </a>
+</body>
+</html>

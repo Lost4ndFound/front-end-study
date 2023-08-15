@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>超链接</title>
+</head>
+<body>
+    <h1>统一资源定位符（URL）与路径（path）快速入门</h1>
+    <p>返回上一个练习<a href="hyperlink-analyze.html">超链接解析</a></p>
+
+    <h2>文档片段</h2>
+    <!-- 超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为文档片段）。要做到这一点，你必须首先给要链接到的元素分配一个 id 属性。 -->
+    <h3 id="youngMan">年轻人不要太气盛</h3>
+    <p>这句经典的台词来源于孙红雷所饰演的角色,在剧中他警告一些年轻人不要太过嚣张自大,因为这样会让自己处处碰壁,得不到别人的认可和尊重。 </p>
+    <p>在网络上,年轻人不要太气盛已经成为了一种流行的梗,用于形容那些自以为是、不谦虚、不尊重别人的年轻人。在一些场合中,比如比赛、讨论等,也常常用这句梗来调侃一些自负、不自量力的人,提醒他们不要太过冲动,要保持谦虚、低调,才能得到更好的发展。</p>
+    <h3>年轻人不要太离谱</h3>
+    <p>"别太离谱"是一种俗语，意思是不要做出不合理的事情或行为，不要超出常规或规则。它可以用来提醒某人不要做出不合理的事情，或者不要超出规定的范围。</p>
+    <h3>年轻人不要太荒谬</h3>
+    <p>在没有软化的情况下，任何一套号的装备首先打不到这个伤害值，这个伤害值UP你自己调了多少心里有点数，其次，是击晕，你把击晕调到几了？调整后的伤害是不低，但这个击晕应该是1.6-1.8倍左右，金狮子连扶墙动作都没有直接流口水，从怪猎给的官方硬质动作，这两个动作之间累计数值差了多少自己看过吗就敢这么拿出来？</p>
+    <P>不是我杠首先，之所以人们觉得你牛逼是因为大多数人珠子和装备没刷出来觉得装备齐了就是这样，但实际装备真正齐了之后这种伤害值，是怪猎官方计算怪物倒地及时间难度上就不可能存在的，不然等你们装备全齐了，打个金狮子试试，要能打成这样随便喷我，真正的弓箭大佬，是能无敌掉怪物的动作，不是像你一样打的怪物都爬不起来，别发这种东西了，弓箭再削弱，弓箭就要退出怪猎舞台了</P>
+    <h3>年轻人不要太抽象</h3>
+    <p>抽象文化在我看来，就是由现在社会环境导致。 </p>
+    <P>年轻一代资源一无所有，内卷，焦虑，无法实现自身价值，在现实世界里被一套一套的无形的规则和道德伦理束缚和压迫的，而年轻一代想打破想反抗这种社会规则，想资源大洗牌，让自己获得资源实现自身价值，享受生活，而抽象文化为什么会以网络的方式产生及传播影响，因为网络是没有约束的，不分贵贱贫富，自由自在的，想有这种方式来反抗和打破现实世界中的规则伦理道德，但想在现实中打破原有的规则，解放资源和思想，是要坐牢的，犯罪的，造反，破坏社会安稳的。抽象文化以网络的方式呈现出来其实是对改变社会环境对改变社会规则的一种哀求，无法真正改变和打破现实世界原有的规则，即大洗牌原有利益阶级对资源的占有和垄断，把资源重新分配，我想抽象文化不只是乐那么简单，而是解构现实世界，让人们拥有真正的幸福感[doge]</P>
+    <p>作者：喵一只的咩咩羊 https://www.bilibili.com/read/cv24110514?jump_opus=1 出处：bilibili</p>
+    <h3>年轻人不要太年轻</h3>
+    <p>迷茫过啊，迷茫是人最普遍的一种状态了吧。这种状态并不只是适用于大人，这是不分年龄的。 </p>
+    <P>大人可能会为柴米油盐，琐碎小事，还有工作压力迷茫，小孩可能会因为学业迷茫，这是很正常的现象，所以不用在感到迷茫的时候恐慌，只需要调整好心态，正确面对自己的迷茫，不停止前进的脚步，这些迷茫一定会自然而然消失的。</P>
+    <p>作者：SF随风l https://www.bilibili.com/read/cv14993039?jump_opus=1 出处：bilibili</p>
+
+    <h2>绝对 URL 和相对 URL</h2>
+    <p>你可能会在网络上遇到两个术语，<strong>绝对 URL</strong> 和<strong>相对 URL</strong>（或者称为，<strong>绝对链接</strong>和<strong>相对链接</strong>）：</p>
+    <p><strong>绝对 URL</strong>：指向由其在 Web 上的绝对位置定义的位置，包括协议和域名。像下面的例子，如果 index.html 页面上传到了 projects 这一个目录。并且 projects 目录位于 web 服务站点的根目录，web 站点的域名为 https://www.example.com，那么这个页面就可以通过 https://www.example.com/projects/index.html 访问（或者通过 https://www.example.com/projects/ 来访问，因为在没有指定特定的 URL 的情况下，大多数 web 服务器会默认访问加载 index.html 这类页面）</p>
+    <p>不管绝对 URL 在哪里使用，它总是指向确定的相同位置。</p>
+    <p><strong>相对 URL</strong>：指向与你链接的文件相关的位置，更像我们在前面一节中所看到的位置。例如，如果我们想从示例文件链接 https://www.example.com/projects/index.html 转到相同目录下的一个 PDF 文件，URL 就是文件名（例如 project-brief.pdf），没有其他的信息要求。如果 PDF 文件能够在 projects 的子目录 pdfs 中访问到，相对路径就是 pdfs/project-brief.pdf（对应的绝对 URL 是 https://www.example.com/projects/pdfs/project-brief.pdf）</p>
+    <p>一个相对的 URL 将指向不同的位置，这取决于引用的文件的实际位置——例如，如果我们把 index.html 文件从 projects 目录移动到 Web 站点的根目录（最高级别，而不是任何目录中），里面的 pdfs/project-brief.pdf 相对 URL 将会指向 https://www.example.com/pdfs/project-brief.pdf，而不是 https://www.example.com/projects/pdfs/project-brief.pdf</p>
+    <p>当然，project-brief.pdf 文件和 pdfs 文件夹的位置不会因为你移动了 index.html 文件而突然发生变化——这将使你的链接指向错误的位置，因此如果单击它，它将无法工作。你得小心点！</p>
+
+    <p id="youngMan">年轻人应该<a href="hyperlink-url-path.html#youngMan">...</a></p>
+</body>
+</html>
