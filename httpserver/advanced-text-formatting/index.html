@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML 中有许多其他元素可以用于格式化文本，我们没有在 HTML 文字处理基础中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引用、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。">
+    <title>文本格式进阶</title>
+</head>
+<body>
+    <h1>描述列表</h1>
+    <!-- 在 HTML 基础部分，我们讨论了如何在 HTML 中标记基本的列表，但是我们没有提到你偶尔会遇到的第三种类型的列表——描述列表（description list） -->
+    <h2>描述列表示例</h2>
+    <!-- 描述列表使用与其他列表类型不同的闭合标签——<dl>；此外，每一项都用 <dt>（description term）元素闭合。每个描述都用 <dd>（description definition）元素闭合。 -->
+    <dl>
+        <dt>内心独白</dt>
+        <dd>
+          戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
+        </dd>
+        <dt>语言独白</dt>
+        <dd>
+          戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
+        </dd>
+        <dt>旁白</dt>
+        <dd>
+          戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
+        </dd>
+    </dl>
+    <h2>单个术语的多个描述</h2>
+    <dl>
+        <dt>旁白</dt>
+        <dd>
+          戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
+        </dd>
+        <dd>
+          写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其他位置（通常位于主线内容旁边一个文本框内）。
+        </dd>
+    </dl>
+
+    <h1>引用</h1>
+    <!-- HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。 -->
+    <h2>块引用</h2>
+    <!-- 如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 <blockquote> 元素包裹起来表示，并且在 cite 属性里用 URL 来指向引用的资源。 -->
+    <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+        <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+        extended quotation.
+    </p>
+    <p>Here is a blockquote:</p>
+    <blockquote cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
+        <p>
+            The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+            <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+            an extended quotation.
+        </p>
+    </blockquote>
+
+    <h2>行内引用</h2>
+    <!-- 除了使用 <q> 元素以外，行内元素用同样的方式工作。 -->
+        <p>
+            The quote element — <code>&lt;q&gt;</code> — is
+            <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"> 
+                intended for short quotations that don't require paragraph breaks.
+            </q>
+        </p>
+    <h2>引文</h2>
+    <!-- cite 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 cite 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。 -->
+    <!-- 这里有 <cite> 元素，但它是为了包含所引用资源的标题（如书名）。然而，你没有理由不把 <cite> 内的文字以某种方式链接到引用源。 -->
+        <p>
+            According to the
+            <a href="/zh-CN/docs/Web/HTML/Element/blockquote">
+              <cite>MDN blockquote page</cite>
+            </a>:
+          </p>
+          
+          <blockquote cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
+            <p>
+              The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+              <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+              an extended quotation.
+            </p>
+          </blockquote>
+          
+          <p>
+            The quote element — <code>&lt;q&gt;</code> — is
+            <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">
+                intended for short quotations that don't require paragraph breaks.
+            </q>
+            — 
+            <a href="/zh-CN/docs/Web/HTML/Element/q"> 
+                <cite>MDN q page</cite>
+            </a>.
+          </p>
+    <h1>缩略语</h1>
+    <!-- 另一个你在 Web 上看到的相当常见的元素是 <abbr>——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释。当包括这两种情况时，在第一次使用时提供纯文本的完整扩展，同时用 <abbr> 来标记缩写。这为用户代理提供了如何公布/显示内容的提示，同时告知所有用户该缩写的含义。 -->
+    <h2>缩略语示例</h2>
+    <p>
+        我们使用
+        <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr>
+        来组织网页文档。
+      </p>
+      
+      <p>
+        第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>将于 2024 年 8
+        月在法国巴黎举行。
+      </p>
+    <h1>标记联系方式</h1>
+    <!-- HTML 有个用于标记联系方式的元素——<address>。 -->
+    <address>翻斗花园</address>
+
+    <address>
+        <p>
+          1001室<br />
+          翻斗花园2号楼<br />
+          翻斗大街
+        </p>
+        <ul>
+          <li>Tel: 01234 567 890</li>
+          <li>Email: hututu@god.com</li>
+        </ul>
+    </address>
+
+    <address>
+        由 <a href="../my-first-site/index.html">胡图图</a> 编写的页面。
+    </address>
+    <!-- <address> 元素只能用于提供最近的 <article> 或 <body> 元素所含文件的联系信息。在一个网站的页脚使用它来包括整个网站的联系信息，或者在一篇文章里面使用它来包括作者的联系信息，这都是正确的，但不能用来标记与该页面内容无关的地址列表。 -->
+    
+    <h1>上标和下标</h1>
+    <!-- 当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标，以确保它们的正确含义。<sup> 和 <sub> 元素可以解决这样的问题。 -->
+        <p>
+            咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
+        </p>
+        <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
+    
+    <h1>展示计算机代码</h1>
+    <!-- 有大量的 HTML 元素可以来标记计算机代码： -->
+    <!-- <code>：用于标记计算机通用代码。 -->
+    <!-- <pre>：用于保留空白字符（通常用于代码块）——如果文本中使用了缩进或多余的空白，浏览器将忽略它，你将不会在呈现的页面上看到它。但是，如果你将文本包含在 <pre></pre> 标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。 -->
+    <!-- <var>：用于标记具体变量名。 -->
+    <!-- <kbd>：用于标记输入电脑的键盘（或其他类型）输入。 -->
+    <!-- <samp>：用于标记计算机程序的输出。 -->
+    <pre>
+        <code>
+const para = document.querySelector('p');
+
+para.onclick = function() {
+    alert('噢，噢，噢，别点我了。');
+}
+        </code>
+    </pre>
+    <p>
+        请不要使用 <code>&lt;font&gt;</code> 、
+        <code>&lt;center&gt;</code> 等表象元素。
+    </p>
+    <p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
+    <p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
+    <pre>$ <kbd>ping mozilla.org</kbd>
+        <samp>
+        PING mozilla.org (63.245.215.20): 56 data bytes
+        64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
+        </samp>
+    </pre>
+
+    <h1>标记时间和日期</h1>
+    <!-- HTML 还支持将时间和日期标记为可供机器识别的格式的 <time> 元素 -->
+    <time datetime="2016-01-20">2016 年 1 月 20 日</time><br>
+    <!-- 标准简单日期 -->
+    <time datetime="2016-01-20">20 January 2016</time><br>
+    <!-- 只包含年份和月份-->
+    <time datetime="2016-01">January 2016</time><br>
+    <!-- 只包含月份和日期 -->
+    <time datetime="01-20">20 January</time><br>
+    <!-- 只包含时间，小时和分钟数 -->
+    <time datetime="19:30">19:30</time><br>
+    <!-- 还可包含秒和毫秒 -->
+    <time datetime="19:30:01.856">19:30:01.856</time><br>
+    <!-- 日期和时间 -->
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time><br>
+    <!-- 含有时区偏移值的日期时间 -->
+    <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time><br>
+    <!-- 提及特定周 -->
+    <time datetime="2016-W04">The fourth week of 2016</time>
+</body>
+</html>
