@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频和视频</title>
+</head>
+<body>
+    <h1>web 中的音频和视频</h1>
+    <h2>video 元素</h2>
+    <video src="videos/rabbit320.webm" controls>
+        <p>
+            你的浏览器不支持 HTML5 视频。可点击<a href="videos/rabbit320.mp4">此链接</a>观看
+        </p>
+    </video>
+
+    <h3>使用多个播放源以提高兼容性</h3>
+    <!-- 现在我们将 src 属性从 <video> 标签中移除，转而将它放在几个单独的标签 <source> (en-US) 当中。在这个例子当中，浏览器将会检查 <source> 标签，并且播放第一个与其自身 codec 相匹配的媒体。你的视频应当包括 WebM 和 MP4 两种格式，这两种在目前已经足够支持大多数平台和浏览器。
+
+每个 <source> 标签页含有一个 type 属性，这个属性是可选的，但是建议你添加上这个属性 — 它包含了视频文件的 MIME types ，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 type 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，这样会消耗掉大量的时间和资源。 -->
+    <video controls>
+        <source src="videos/rabbit320.mp4" type="video/mp4">
+        <source src="videos/rabbit320.webm" type="video/webm">
+        <p>
+            你的浏览器不支持 HTML5 视频。可点击<a href="videos/rabbit320.mp4">此链接</a>观看
+        </p>
+    </video>
+
+
+    <h3>其他 video 特性</h3>
+    <video controls width="400" height="400" autoplay loop muted poster="images/poster.png">
+        <source src="videos/rabbit320.mp4" type="video/mp4" />
+        <source src="videos/rabbit320.webm" type="video/webm" />
+        <p>
+          你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+        </p>
+    </video>
+    <hr>
+    <h2>audio 标签</h2>
+    <audio controls>
+        <source src="audios/viper.mp3" type="audio/mp3">
+        <source src="audios/viper.ogg" type="audio/ogg">
+        <p>你的浏览器不支持 HTML5 音频，可点击<a href="audios/viper.mp3">此链接</a>收听。</p>
+    </audio>
+    <h1>显示音轨文本</h1>
+    <video controls>
+        <source src="videos/rabbit320.mp4" type="video/mp4" />
+        <source src="videos/rabbit320.webm" type="video/webm" />
+        <track kind="subtitles" src="vtt/sintel-en.vtt" srclang="en" />
+      </video>
+</body>
+</html>
