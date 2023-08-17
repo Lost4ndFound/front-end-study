@@ -1,0 +1,5 @@
+body {
+    background: url("images/eldenring.png") no-repeat center;
+    background-image: url("images/bike.svg");
+    background-size: contain;
+}
