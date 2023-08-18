@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式图片</title>
+</head>
+
+<style>
+    img#1{
+        width: 320px;
+    }
+</style>
+<body>
+    <h1>如何创建响应式图片？</h1>
+    <h2>普通图片</h2>
+    <img src="images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+    <h2>分辨率切换：不同的尺寸</h2>
+    <!-- 我们可以使用两个新的属性——srcset 和 sizes——来提供更多额外的资源图像和提示，帮助浏览器选择合适的一个资源。 -->
+    <img srcset="images/elva-fairy-320w.jpg 320w images/elva-fairy-480w.jpg 480w, images/elva-fairy-800w.jpg 800w" sizes="(max-width: 400px) 320px, (max-width: 600px) 480px, 800px" src="images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+    <h2>分辨率切换：相同的尺寸，不同的分辨率</h2>
+    <img id="1" srcset="images/elva-fairy-320w.jpg, images/elva-fairy-480w.jpg 1.5x, images/elva-fairy-640w.jpg 2x" src="images/elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+    <h2>美术设计</h2>
+    <h3>初始图片</h3>
+    <img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
+    <h3>响应式图片</h3>
+    <picture>
+        <source media="(max-width: 799px)" srcset="images/elva-480w-close-portrait.jpg">
+        <source media="(min-width: 800px)" srcset="images/elva-800w.jpg">
+        <img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+    </picture>
+    <h2>大胆的使用现代图像格式</h2>
+    <picture>
+        <source type="image/svg+xml" srcset="images/basketball.svg">
+        <source type="image/webp" srcset="images/notepad.webp">
+        <img src="images/elva-fairy-320w.jpg" alt="">
+    </picture>
+</body>
+</html>
