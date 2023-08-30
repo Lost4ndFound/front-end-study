@@ -1,0 +1,49 @@
+h1 {
+    color: red;
+}
+
+p,li {
+    color: green;
+}
+
+li {
+    list-style-type: none;
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+li.special, span.special {
+    color: orange;
+    font-weight: bold;
+}
+
+/* 包含选择符  该选择器将选择<li>内部的任何<em>元素*/
+li em {
+    color: rebeccapurple;
+}
+
+/* 相邻选择符  设置直接出现在标题后面并且与标题具有相同层级的段落样式*/
+h1 + p {
+    font-size: 200%;
+}
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
