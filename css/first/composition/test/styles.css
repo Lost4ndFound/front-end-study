@@ -1,0 +1,46 @@
+/* 在这里创建测试 CSS */
+
+p {
+    color: red;
+}
+
+h1 {
+    font-size: large;
+    color: green;
+}
+
+a:link {
+    color: aquamarine;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    text-decoration-line: none;
+}
+
+.manythings {
+    color: chartreuse;
+}
+
+#onething {
+    color: darkgoldenrod;
+}
+
+* {
+    color: hotpink;
+}
+
+.box p{
+    color: blueviolet;
+}
+
+.box p:first-child{
+    color: crimson;
+}
+
+h3, h4, .intro{
+    color: dodgerblue;
+}
